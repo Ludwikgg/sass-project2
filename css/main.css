@@ -461,7 +461,7 @@ h1.company-name span {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 3em;
   left: 1em;
   -webkit-transform: translateY(-50%);
@@ -504,8 +504,10 @@ h1.company-name span {
 }
 
 .nav-mobile--active {
+  position: fixed;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  height: 100vh;
 }
 
 .nav-desktop {
