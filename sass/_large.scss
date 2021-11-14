@@ -1,113 +1,132 @@
-@media(min-width:992px) {
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 4.8rem;
 
-    h1.company-name {
-        font-size: 6rem;
+    &:before {
+      height: 4px;
+    }
+  }
+
+  h1.company-name {
+    font-size: 9rem;
+  }
+
+  .header {
+    grid-template-rows: auto repeat(2, 1fr);
+
+    &__text {
+      grid-row: 2/4;
+      grid-column: 1/2;
+
+      p {
+        font-size: 1.8rem;
+      }
     }
 
-    .header {
-        grid-template-rows: auto repeat(2, 1fr);
-
-        &__text {
-            grid-row: 2/4;
-            grid-column: 1/2;
-
-            p {
-                font-size: 1.8rem;
-            }
-        }
-
-        &__img {
-            grid-row: 1/4;
-            grid-column: 2/3;
-        }
-
-        &__arrow {
-            display: block;
-            position: absolute;
-            bottom: 3em;
-            left: 48%;
-            padding: 16px 20px;
-            transform: translate(-50%);
-            border: 1.5px solid $white;
-            border-radius: 50%;
-
-            &::before {
-                position: absolute;
-                top: 0%;
-                left: 0;
-                content: "";
-                width: 100%;
-                height: 100%;
-                border: 1.5px solid $white;
-                border-radius: 50%;
-                animation: pulse 2s infinite;
-            }
-        }
-
-        &__arrow-icon {
-            width: 50px;
-
-        }
-
-        &__bg-icon-one {
-            left: 6em;
-            bottom: 8em;
-            width: 10%;
-        }
-
-        &__bg-icon-two {
-            display: block;
-            top: 10em;
-            left: 35%;
-            width: 5%;
-            animation: rotate-left 55s infinite linear;
-        }
+    &__img {
+      grid-row: 1/4;
+      grid-column: 2/3;
+      height: 100%;
     }
 
-    .nav {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        padding: 1em;
+    &__arrow {
+      display: block;
+      position: absolute;
+      bottom: 3em;
+      left: 48%;
+      padding: 16px 20px;
+      transform: translate(-50%);
+      border: 1.5px solid $white;
+      border-radius: 50%;
 
-        &-desktop {
-            display: block;
-            border-bottom: 2px solid $gold;
-            color: $white;
-        }
-
-        &__link {
-            color: $white;
-
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                width: 100%;
-                height: 100%;
-                border: 1px solid $gold;
-                border-radius: 8px;
-                opacity: 0;
-            }
-
-            &:hover::before {
-                animation: pulse 1s;
-            }
-        }
+      &::before {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1.5px solid $white;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
     }
 
-    .hamburger {
-        display: none;
+    &__arrow-icon {
+      width: 50px;
     }
 
+    &__bg-icon-one {
+      left: 6em;
+      bottom: 8em;
+      width: 10%;
+    }
+
+    &__bg-icon-two {
+      display: block;
+      top: 10em;
+      left: 35%;
+      width: 5%;
+      animation: rotate-left 55s infinite linear;
+    }
+  }
+
+  .nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 1em;
+
+    &-desktop {
+      display: block;
+      border-bottom: 2px solid $gold;
+      color: $white;
+    }
+
+    &__link {
+      color: $white;
+      margin-left: 1.5em;
+      font-size: 1.5em;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1px solid $gold;
+        border-radius: 8px;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        animation: pulse 1s;
+      }
+      &:hover {
+        color: $darkgold;
+      }
+    }
+
+    &__link:nth-of-type(1) {
+      color: $gold;
+    }
+
+    &__link:nth-of-type(3) {
+      color: $darkgold;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
 
-@media(min-width:1200px) {
-    .header {
-        &__text {
-            p {
-                font-size: 2.2rem;
-            }
-        }
+@media (min-width: 1200px) {
+  .header {
+    &__text {
+      p {
+        font-size: 2.5rem;
+      }
     }
+  }
 }
