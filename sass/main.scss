@@ -40,6 +40,13 @@ h1.company-name {
     color: $gold;
     transition: color 1s;
   }
+  &:hover {
+    color: $gold;
+  }
+
+  &:hover span {
+    color: $darkgold;
+  }
 }
 .section-title {
   position: relative;
@@ -63,6 +70,13 @@ h1.company-name {
   span {
     color: $darkgold;
     transition: color 0.5s;
+  }
+  &:hover {
+    color: $darkgold;
+  }
+
+  &:hover span {
+    color: $gold;
   }
 }
 // header
@@ -237,6 +251,14 @@ h1.company-name {
       grid-row: 3/4;
       grid-column: 1/-1;
     }
+    &:hover {
+      background-color: $darker;
+      border: 1px solid $gold;
+      z-index: 1;
+    }
+    &:hover::before {
+      animation: pulse 1s;
+    }
   }
 }
 
@@ -287,6 +309,10 @@ h1.company-name {
     text-decoration: none;
     transition: color 0.3s;
     cursor: pointer;
+
+    &:hover {
+      color: $darkgold;
+    }
   }
 
   &__bg-icon {
@@ -304,6 +330,12 @@ h1.company-name {
       left: 50%;
       transform: translateX(-50%);
     }
+    &:before {
+      animation: slide-middle-to-zero-stay 0.3s linear both;
+    }
+    &:hover::before {
+      animation: slide-middle-to-zero 0.3s linear both;
+    }
   }
 
   &__box {
@@ -315,6 +347,10 @@ h1.company-name {
     background-color: $dark;
     cursor: pointer;
     transition: background-color 0.5s, border 1s;
+    &:hover {
+      background-color: $darker;
+      border: 1px solid $gold;
+    }
   }
 
   &__item {
@@ -364,6 +400,11 @@ h1.company-name {
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s color 0.3s;
+      &:hover {
+        color: $gold;
+        background-color: $dark;
+        border: 1px solid transparent;
+      }
     }
   }
 }
@@ -402,6 +443,12 @@ h1.company-name {
     &::before {
       left: 100%;
       transform: translate(-100%);
+    }
+    &:before {
+      animation: slide-right-to-zero-stay 0.3s linear both;
+    }
+    &:hover::before {
+      animation: slide-right-to-zero 0.3s linear both;
     }
   }
 
